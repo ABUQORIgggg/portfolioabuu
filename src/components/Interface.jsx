@@ -47,10 +47,10 @@ const AboutSection = (props) => {
   const { setSection } = props;
   return (
     <Section mobileTop>
-      <h1 className="text-4xl md:text-6xl font-extrabold leading-snug mt-8 md:mt-0">
+      <h1 className="text-4xl md:text-6xl font-bold leading-snug mt-8 md:mt-0 ">
         Hi, I'm
         <br />
-        <span className="bg-white px-1 italic">Wawa Sensei</span>
+        <span className=" px-1 italic text-4xl">Isroilov Abdullakh</span>
       </h1>
       <motion.p
         className="text-lg text-gray-600 mt-4"
@@ -67,9 +67,15 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-        I make YouTube videos to help developers
+        <p className="italic text-sky-600 font-bold">
+          {" "}
+          <div className="w-[300px] h-10">
+          I'm 16 years old, I'm a frontend developer, it's been 2 years since I joined this thread, and in this year I've done a lot of projects and participated in a real project.
+
+          </div>
+        </p>
         <br />
-        learn how to build 3D apps
+        <br />
       </motion.p>
       <motion.button
         onClick={() => setSection(3)}
@@ -96,19 +102,19 @@ const AboutSection = (props) => {
 
 const skills = [
   {
-    title: "Threejs / React Three Fiber",
-    level: 80,
+    title: "Html/css",
+    level: 100,
   },
   {
     title: "React / React Native",
     level: 90,
   },
   {
-    title: "Nodejs",
+    title: "Next.js",
     level: 90,
   },
   {
-    title: "Typescript",
+    title: "Redux",
     level: 60,
   },
   {
@@ -118,17 +124,17 @@ const skills = [
 ];
 const languages = [
   {
-    title: "🇫🇷 French",
-    level: 100,
+    title: "🇫🇷 English",
+    level: 50,
   },
   {
-    title: "🇺🇸 English",
+    title: "🇪🇬 Arabic language",
     level: 80,
   },
-  {
-    title: "🇯🇵 Japanese",
-    level: 20,
-  },
+  // {
+  //   title: "🇯🇵 ",
+  //   level: 20,
+  // },
 ];
 
 const SkillsSection = () => {
@@ -268,60 +274,25 @@ const ContactSection = () => {
     <Section>
       <h2 className="text-3xl md:text-5xl font-bold">Contact me</h2>
       <div className="mt-8 p-8 rounded-md bg-white bg-opacity-50 w-96 max-w-full">
-        {state.succeeded ? (
-          <p className="text-gray-900 text-center">Thanks for your message !</p>
-        ) : (
-          <form onSubmit={handleSubmit}>
-            <label for="name" className="font-medium text-gray-900 block mb-1">
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
-            />
-            <label
-              for="email"
-              className="font-medium text-gray-900 block mb-1 mt-8"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
-            />
-            <ValidationError
-              className="mt-1 text-red-500"
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-            />
-            <label
-              for="email"
-              className="font-medium text-gray-900 block mb-1 mt-8"
-            >
-              Message
-            </label>
-            <textarea
-              name="message"
-              id="message"
-              className="h-32 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
-            />
-            <ValidationError
-              className="mt-1 text-red-500"
-              errors={state.errors}
-            />
-            <button
-              disabled={state.submitting}
-              className="bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16 "
-            >
-              Submit
-            </button>
-          </form>
-        )}
+        <h1 className="text-2xl font-bold mb-4">Contact Me</h1>
+        <p className="mb-2">
+          <strong>Phone Number:</strong>{" "}
+          <a href="tel:+998339462005" className="text-blue-500">
+            +998339462004
+          </a>
+        </p>
+        <p className="mb-2">
+          <strong>Email:</strong>{" "}
+          <a href="mailto:abuxzzzzzzzz@gmail.com" className="text-blue-500">
+            abuxzzzzzz@gmail.com
+          </a>
+        </p>
+        <p>
+          <strong>Telegram:</strong>{" "}
+          <a href="https://t.me/khdys44" className="text-blue-500">
+            @khdys44
+          </a>
+        </p>
       </div>
     </Section>
   );
